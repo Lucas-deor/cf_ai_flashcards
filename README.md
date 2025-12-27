@@ -227,7 +227,7 @@ cf_ai_flashcards/
 
 ## 📝 Development Notes
 
-This project was created as part of the Cloudflare job application assignment. All AI prompts used during development are documented in \`PROMPTS.md\`.
+All AI prompts used during development are documented in \`PROMPTS.md\`.
 
 ## 📄 License
 
