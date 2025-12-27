@@ -1,0 +1,16 @@
+name = "cf-ai-flashcards-worker"
+main = "index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "FLASHCARDS_DO"
+class_name = "FlashcardsDurableObject"
+script_name = "cf-ai-flashcards-worker"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["FlashcardsDurableObject"]

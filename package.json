@@ -1,0 +1,16 @@
+{
+  "name": "cf_ai_flashcards",
+  "version": "1.0.0",
+  "description": "AI-powered flashcard generator using Cloudflare Workers AI and Durable Objects",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "pages:dev": "wrangler pages dev pages",
+    "pages:deploy": "wrangler pages deploy pages"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^4.54.0"
+  }
+}
