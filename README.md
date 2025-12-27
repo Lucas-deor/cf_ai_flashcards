@@ -233,13 +233,9 @@ All AI prompts used during development are documented in \`PROMPTS.md\`.
 
 MIT License - feel free to use this project for learning or inspiration!
 
-## 👤 Author
-
-Built with ❤️ as part of Cloudflare application assignment.
-
 ## 🤝 Contributing
 
-This is an assignment project, but feel free to fork and modify for your own use!
+Feel free to fork and modify for your own use!
 
 ---
 
