@@ -13,7 +13,7 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #272727 0%, #1a1a1a 100%);
       min-height: 100vh;
       padding: 20px;
       color: #333;
@@ -38,12 +38,13 @@
     .subtitle {
       font-size: 1.1rem;
       opacity: 0.9;
+      color: #F6821F;
     }
 
     .main-card {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
       padding: 40px;
       margin-bottom: 30px;
     }
@@ -67,12 +68,12 @@
 
     input:focus {
       outline: none;
-      border-color: #667eea;
+      border-color: #F6821F;
     }
 
     button {
       padding: 15px 30px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #F6821F 0%, #ff9a3d 100%);
       color: white;
       border: none;
       border-radius: 8px;
@@ -84,7 +85,7 @@
 
     button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      box-shadow: 0 5px 20px rgba(246, 130, 31, 0.4);
     }
 
     button:disabled {
@@ -97,7 +98,7 @@
       display: none;
       text-align: center;
       padding: 20px;
-      color: #667eea;
+      color: #F6821F;
     }
 
     .loading.active {
@@ -122,11 +123,13 @@
       min-height: 200px;
       display: flex;
       flex-direction: column;
+      border: 2px solid transparent;
     }
 
     .flashcard:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 25px rgba(246, 130, 31, 0.2);
+      border-color: #F6821F;
     }
 
     .flashcard.flipped .front {
@@ -143,12 +146,13 @@
 
     .flashcard-topic {
       display: inline-block;
-      background: #667eea;
-      color: white;
+      background: linear-gradient(135deg, #272727 0%, #3a3a3a 100%);
+      color: #F6821F;
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 0.8rem;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .flashcard-content {
@@ -159,11 +163,12 @@
       text-align: center;
       font-size: 1.1rem;
       line-height: 1.6;
+      color: #272727;
     }
 
     .flashcard-label {
       font-size: 0.9rem;
-      color: #999;
+      color: #F6821F;
       margin-bottom: 10px;
       font-weight: 600;
       text-transform: uppercase;
@@ -183,6 +188,7 @@
       font-size: 18px;
       line-height: 1;
       padding: 0;
+      transition: background 0.2s;
     }
 
     .delete-btn:hover {
@@ -194,7 +200,7 @@
       justify-content: space-around;
       margin-top: 30px;
       padding: 20px;
-      background: #f8f9fa;
+      background: linear-gradient(135deg, #272727 0%, #3a3a3a 100%);
       border-radius: 8px;
     }
 
@@ -205,12 +211,12 @@
     .stat-value {
       font-size: 2rem;
       font-weight: 700;
-      color: #667eea;
+      color: #F6821F;
     }
 
     .stat-label {
       font-size: 0.9rem;
-      color: #666;
+      color: #e0e0e0;
       margin-top: 5px;
     }
 
@@ -232,7 +238,7 @@
 
     .spinner {
       border: 4px solid #f3f3f3;
-      border-top: 4px solid #667eea;
+      border-top: 4px solid #F6821F;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -244,7 +250,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>🧠 AI Flashcard Generator</h1>
+      <h1>AI Flashcard Generator</h1>
       <p class="subtitle">Powered by Cloudflare Workers AI (Llama 3.3) & Durable Objects</p>
     </header>
 
@@ -266,7 +272,7 @@
           max="10"
           style="max-width: 100px;"
         />
-        <button id="generateBtn" onclick="generateFlashcards()">Generate ✨</button>
+        <button id="generateBtn" onclick="generateFlashcards()">Generate</button>
       </div>
 
       <div class="loading" id="loading">
